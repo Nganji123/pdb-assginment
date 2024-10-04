@@ -1,3 +1,4 @@
+
 SQL*Plus: Release 21.0.0.0.0 - Production on Tue Oct 1 18:14:58 2024
 Version 21.3.0.0.0
 
@@ -77,12 +78,12 @@ VALUE
 
 -- Create a new pluggable database named pdb1 with admin user
 SQL> CREATE PLUGGABLE DATABASE pdb1
-  2     ADMIN USER pdbadmin IDENTIFIED BY jesse;
+  2     ADMIN USER pdbadmin IDENTIFIED BY blaise;
 
 Pluggable database created.
 
 -- Create another pluggable database named plsql_class2024db with admin user
-SQL> create pluggable database plsql_class2024db admin user pdbadmin identified by jesse;
+SQL> create pluggable database plsql_class2024db admin user pdbadmin identified by blaise;
 
 Pluggable database created.
 
@@ -137,12 +138,12 @@ SQL> ALTER SESSION SET CONTAINER = plsql_class2024db;
 Session altered.
 
 -- Create a new user in the current PDB
-SQL> CREATE USER je _plsqlauca IDENTIFIED BY jesse;
+SQL> CREATE USER bl_plsqlauca IDENTIFIED BY blaise;
 
 User created.
 
 -- Grant all privileges to the newly created user
-SQL> GRANT all privileges to je_plsqlauca;
+SQL> GRANT all privileges to bl_plsqlauca;
 
 Grant succeeded.
 
@@ -158,13 +159,13 @@ CON_NAME
 ------------------------------
 CDB$ROOT
 
--- Create a new pluggable database named je_to_delete_pdb with admin user
-SQL> CREATE PLUGGABLE DATABASE je_to_delete_pdb
-  2     ADMIN USER pdbadmin IDENTIFIED BY jesse;
+-- Create a new pluggable database named bl_to_delete_pdb with admin user
+SQL> CREATE PLUGGABLE DATABASE bl_to_delete_pdb
+  2     ADMIN USER pdbadmin IDENTIFIED BY blaise;
 
 Pluggable database created. -- The pluggable database is created
 
--- Drop the pluggable database je_to_delete_pdb including its datafiles
-SQL> DROP PLUGGABLE DATABASE je_to_delete_pdb INCLUDING DATAFILES;
+-- Drop the pluggable database bl_to_delete_pdb including its datafiles
+SQL> DROP PLUGGABLE DATABASE bl_to_delete_pdb INCLUDING DATAFILES;
 
  Pluggable database dropped.
